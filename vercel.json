@@ -4,5 +4,11 @@
   "framework": "vite",
   "installCommand": "npm install && cd client && npm install",
   "devCommand": "cd client && npm run dev",
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./client"
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./client",
+  "env": {
+    "VITE_CONVEX_URL": {
+      "description": "Convex backend URL",
+      "value": "https://zany-gnat-805.convex.cloud"
+    }
+  }
 }

@@ -6,6 +6,10 @@ A full-stack Progressive Web Application (PWA) for restaurant food ordering and 
 [![Vite](https://img.shields.io/badge/Vite-5.0.8-purple.svg)](https://vitejs.dev/)
 [![Convex](https://img.shields.io/badge/Convex-Backend-orange.svg)](https://convex.dev/)
 [![Firebase](https://img.shields.io/badge/Firebase-Auth-yellow.svg)](https://firebase.google.com/)
+[![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com)
+[![Documentation](https://img.shields.io/badge/Docs-Complete-success.svg)](./DOCS-INDEX.md)
+
+> **📚 Complete Documentation Available!** See [DOCS-INDEX.md](DOCS-INDEX.md) for all guides.
 
 ## 📋 Table of Contents
 
@@ -25,10 +29,14 @@ A full-stack Progressive Web Application (PWA) for restaurant food ordering and 
 ## 📚 Additional Documentation
 
 - **[QUICKSTART.md](QUICKSTART.md)** - Quick start guide and setup summary
+- **[QUICK-DEPLOY.md](QUICK-DEPLOY.md)** - ⚡ Fast deployment guide with Convex URL setup
+- **[ENV-SETUP.md](ENV-SETUP.md)** - Complete environment variables configuration
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - Detailed system architecture documentation
 - **[WORKFLOW.md](WORKFLOW.md)** - Complete user workflows and process flows
 - **[CONVEX-BUILD-FIX.md](CONVEX-BUILD-FIX.md)** - Build error troubleshooting guide
 - **[DEPLOYMENT.md](DEPLOYMENT.md)** - Production deployment checklist
+- **[VISUAL-DIAGRAMS.md](VISUAL-DIAGRAMS.md)** - Visual architecture diagrams
+- **[DOCS-INDEX.md](DOCS-INDEX.md)** - Complete documentation index
 
 ## 🎯 Overview
 
