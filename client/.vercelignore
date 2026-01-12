@@ -1,0 +1,7 @@
+# Ignore Convex backend files during Vercel build
+../convex/modules
+../convex/lib
+../convex/schema.ts
+
+# Ignore node_modules
+node_modules
