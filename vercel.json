@@ -8,7 +8,7 @@
   "env": {
     "VITE_CONVEX_URL": {
       "description": "Convex backend URL",
-      "value": "https://zany-gnat-805.convex.cloud"
+      "value": "https://rare-woodpecker-208.convex.cloud"
     }
   }
 }
