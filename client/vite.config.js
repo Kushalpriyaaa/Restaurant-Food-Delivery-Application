@@ -11,10 +11,24 @@ const stubConvexServer = () => ({
   },
   load(id) {
     if (id === 'convex/server') {
-      // Return empty stubs for server-only exports
+      // Create a deep proxy that returns function reference strings
       return `
+        const createDeepProxy = (path = []) => {
+          return new Proxy(() => {}, {
+            get(target, prop) {
+              if (prop === 'toString' || prop === Symbol.toStringTag) {
+                return () => path.join(':');
+              }
+              return createDeepProxy([...path, prop]);
+            },
+            apply(target, thisArg, args) {
+              return path.join(':');
+            }
+          });
+        };
+        
         export const componentsGeneric = () => ({});
-        export const anyApi = {};
+        export const anyApi = createDeepProxy();
       `
     }
   }
