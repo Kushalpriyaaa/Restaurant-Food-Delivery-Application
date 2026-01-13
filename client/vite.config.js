@@ -1,31 +1,33 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
+
+// Plugin to stub out convex/server imports in client build
+const stubConvexServer = () => ({
+  name: 'stub-convex-server',
+  resolveId(id) {
+    if (id === 'convex/server') {
+      return id
+    }
+  },
+  load(id) {
+    if (id === 'convex/server') {
+      // Return empty stubs for server-only exports
+      return `
+        export const componentsGeneric = () => ({});
+        export const anyApi = {};
+      `
+    }
+  }
+})
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), stubConvexServer()],
   publicDir: 'public',
   server: {
     port: 3000,
     open: true
   },
   build: {
-    outDir: 'dist',
-    rollupOptions: {
-      external: [
-        // Exclude Convex server imports from client bundle
-        /^convex\/server$/,
-      ]
-    }
-  },
-  resolve: {
-    alias: {
-      // Create alias for convex generated files
-      '@convex': path.resolve(__dirname, '../convex/_generated'),
-    }
-  },
-  optimizeDeps: {
-    // Exclude server-side packages from optimization
-    exclude: ['convex/server']
+    outDir: 'dist'
   }
 })
