@@ -3,8 +3,7 @@ SahOne
 
 > A modern, full-stack restaurant web application enabling users to browse menus,add items to cart, place orders,and get home delivery and restaurant admins to view and edit menu items and receive orders, all while enjoying seamless food ordering experiences. Built with React, Convex, and Firebase.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://your-deployment-url.vercel.app)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Live Demo](https://kadeep-technologies-assignment.onrender.com)]
 
 
 
