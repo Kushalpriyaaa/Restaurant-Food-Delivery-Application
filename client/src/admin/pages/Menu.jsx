@@ -537,7 +537,7 @@ export default function Menu() {
         {/* Category Management Modal */}
         {showCategoryModal && (
           <div className="modal-overlay" onClick={() => setShowCategoryModal(false)}>
-            <div className="modal-content standard-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-content slide-in" onClick={(e) => e.stopPropagation()}>
               <div className="modal-header">
                 <h2>Manage Categories</h2>
                 <button className="modal-close" onClick={() => setShowCategoryModal(false)}>×</button>

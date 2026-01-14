@@ -6,7 +6,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 999;
+  z-index: 1100;
   animation: fadeIn 0.3s ease;
   backdrop-filter: blur(2px);
 }
@@ -29,7 +29,7 @@
   height: 100%;
   background: #ffffff;
   box-shadow: -8px 0 40px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
+  z-index: 1101;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;

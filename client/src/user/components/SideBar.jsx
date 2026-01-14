@@ -8,11 +8,11 @@ export default function SideBar({ isOpen, onClose }) {
   const { signOut, currentUser } = useAuth();
 
   const menu = [
-    { path: "/user", icon: "🏠", label: "Home" },
-    { path: "/user/offers", icon: "🎁", label: "Offers" },
-    { path: "/user/orders", icon: "📦", label: "Orders" },
-    { path: "/user/cart", icon: "🛒", label: "Cart" },
-    { path: "/user/profile", icon: "👤", label: "Profile" },
+    { path: "/user", label: "Home" },
+    { path: "/user/offers", label: "Offers" },
+    { path: "/user/orders", label: "Orders" },
+    { path: "/user/cart", label: "Cart" },
+    { path: "/user/profile", label: "Profile" },
   ];
 
   const handleLogout = async () => {
@@ -59,7 +59,6 @@ export default function SideBar({ isOpen, onClose }) {
               }`}
               onClick={onClose}
             >
-              <span className="menu-icon">{item.icon}</span>
               <span className="menu-label">{item.label}</span>
             </Link>
           ))}
@@ -67,11 +66,9 @@ export default function SideBar({ isOpen, onClose }) {
 
         <div className="sidebar-footer">
           <Link to="/user/profile" className="settings-btn" onClick={onClose}>
-            <span>⚙️</span>
             <span>Settings</span>
           </Link>
           <button className="logout-btn" onClick={handleLogout}>
-            <span>🚪</span>
             <span>Logout</span>
           </button>
         </div>

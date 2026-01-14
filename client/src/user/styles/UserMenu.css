@@ -42,12 +42,29 @@
 .menu-page-header {
   text-align: center;
   margin-bottom: 3rem;
-  background: url('/Goodfood.png'), url('/mirch.png'), linear-gradient(135deg, #ff3b30 0%, #e53935 100%);
-  background-size: auto 110%, auto 110%, cover;
-  background-position: left -20px top -35px, right -7px top 6px, center;
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  background: url('/mirch.png'), linear-gradient(135deg, #ff3b30 0%, #e53935 100%);
+  background-size: auto 110%, cover;
+  background-position: right -7px top 6px, center;
+  background-repeat: no-repeat, no-repeat;
   padding: 1.5rem 1rem;
   border-radius: 0 0 20px 20px;
+  position: relative;
+  overflow: visible;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.header-food-image {
+  position: absolute;
+  left: -20px;
+  top: -35px;
+  height: 110%;
+  width: auto;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .menu-page-header h1 {
@@ -74,15 +91,31 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: url('/Goodfood.png'), linear-gradient(135deg, #ff3b30 0%, #e53935 100%);
-    background-size: auto 160%, cover;
-    background-position: left 610px bottom -15px, center;
-    
-    background-repeat: no-repeat, no-repeat;
+    background: linear-gradient(135deg, #ff3b30 0%, #e53935 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     padding: 2rem 2rem 1.5rem;
     margin: 0;
     box-shadow: 0 4px 20px rgba(255, 59, 48, 0.3);
+    overflow: visible;
+  }
+
+  .header-food-image {
+    position: absolute;
+    left: 38%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    height: 120%;
+    width: auto;
+    z-index: 1;
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
   }
 
   .menu-page-header h1 {

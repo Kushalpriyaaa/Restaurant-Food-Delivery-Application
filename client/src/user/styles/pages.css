@@ -482,6 +482,7 @@
   justify-content: center;
   z-index: 1000;
   padding: 20px;
+  overflow-y: auto;
 }
 
 .party-modal {
@@ -492,8 +493,9 @@
   width: 100%;
   position: relative;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  max-height: 90vh;
+  max-height: 75vh;
   overflow-y: auto;
+  margin: 50px auto;
 }
 
 .modal-close {

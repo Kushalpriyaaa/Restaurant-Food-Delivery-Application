@@ -24,9 +24,9 @@ const HomePage = () => {
         </div>
         
         <div className="navbar-center">
-          <a href="#home" className="nav-item active">Home</a>
+          {/* <a href="#home" className="nav-item active">Home</a>
           <a href="#menu" className="nav-item">Menu</a>
-          <a href="#service" className="nav-item">Service</a>
+          <a href="#service" className="nav-item">Service</a> */}
          
         </div>
 

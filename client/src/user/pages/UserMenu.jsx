@@ -135,8 +135,11 @@ export default function UserMenu() {
       <div className="page-container">
         <section className="bestsellers-section">
           <div className="menu-page-header">
-            <h1>Good Food Starts Here</h1>
-            <p>Order what you love</p>
+            <div className="header-content">
+              <h1>Good Food Starts Here</h1>
+              <p>Order what you love</p>
+            </div>
+            <img src="/Goodfood.png" alt="Food" className="header-food-image" />
           </div>
 
           {/* Desktop Category Filter */}
