@@ -24,7 +24,7 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch - Network first, cache fallback (better for development)
+// Fetch - Network first, cache fallback
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     fetch(event.request)
@@ -43,7 +43,16 @@ self.addEventListener('fetch', (event) => {
       })
       .catch(() => {
         // If network fails, try cache
-        return caches.match(event.request);
+        return caches.match(event.request).then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+          // Return a proper response if nothing in cache
+          return new Response('Network error', {
+            status: 408,
+            headers: { 'Content-Type': 'text/plain' }
+          });
+        });
       })
   );
 });

@@ -6,7 +6,8 @@ import { AuthProvider } from './context/AuthContext';
 import App from './App';
 import './styles.css';
 
-if ('serviceWorker' in navigator) {
+// Only register service worker in production
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
       .register('/service-worker.js')
